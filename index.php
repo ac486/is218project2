@@ -6,13 +6,13 @@
    $obj = new $REQUEST['page'];
    class page{
       function __contruct(){
-         echo 'I am the' . $_REQUEST['page'],'page';
+         echo 'I am the' . $_REQUEST['page'].'page';
       }
    }
 
    class php extends page {
       function __construct(){
-         echo 'This is an object:',$_REQUEST['page'],'page';
+         echo 'This is an object:'.$_REQUEST['page'].'page';
       }
       
    }
