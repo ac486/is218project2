@@ -1,29 +1,32 @@
 <html>
 <p>test</p>
 <?php
-   echo'<a href="?page=php">PHP Menu</a></br>';
-
-   $obj = new $REQUEST['page'];
-   class page{
-      function __contruct(){
-         echo 'I am the' . $_REQUEST['page'].'page';
+  /*$CSVfp = fopen("hd2013.csv","r");
+   if($CSVfp !== FALSE){
+      while(! feof($CSVfp)){
+         $data = fgetcsv($CSVfp,1000, ",");
+	 print_r($data);
       }
    }
-
-   class php extends page {
-      function __construct(){
-         echo 'This is an object:'.$_REQUEST['page'].'page';
-      }
-      
-   }
-
-
-
-
+   fclose($CSVfp);*/
+   function readCSV($csvFile){
+   	$file_handle = fopen($csvFile, 'r');
+		while (!feof($file_handle) ) {
+				$line_of_text[] = fgetcsv($file_handle, 1024);
+					}
+						fclose($file_handle);
+							return $line_of_text;
+							}
 
 
+							// Set path to CSV file
+							$csvFile = 'hd2013.csv';
 
-
+							$csv =
+							readCSV($csvFile);
+							echo '<pre>';
+							print_r($csv);
+							echo '</pre>';
 
 
 ?>
