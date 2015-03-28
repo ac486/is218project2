@@ -1,5 +1,7 @@
 <html>
-<p>test</p>
+<head><title>IS218 Project 1</title></head>
+<body>
+<p>test1</p>
 <?php
 class csvfile{
    public $csv;
@@ -23,7 +25,7 @@ class csvfile{
    
    if(empty($_GET)){
       foreach($records as $record){
-         $i++;
+	 $i++;
 	 $record_num = $i - 1;
 	 echo '<a href='.'"https://web.njit.edu/~ac486/is218project/index.php?record='.$record_num.'"'.'>University'.$i.'</a>';
 	 echo'</p>';
@@ -50,4 +52,5 @@ $newfile->readcsv("hd2013.csv",TRUE);
 
 
 ?>
+</body>
 </html>
