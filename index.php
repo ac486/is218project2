@@ -1,32 +1,52 @@
 <html>
 <p>test</p>
 <?php
-  /*$CSVfp = fopen("hd2013.csv","r");
-   if($CSVfp !== FALSE){
-      while(! feof($CSVfp)){
-         $data = fgetcsv($CSVfp,1000, ",");
-	 print_r($data);
+class csvfile{
+   public $csv;
+   public $column_headings;
+
+   public function readcsv($csv,$column_headings){
+      ini_set('auto_detect_line_endings',TRUE);
+      if(($handle = fopen($csv,"r")) !== FALSE){
+         while(($row=fgetcsv($handle,",")) !== FALSE){
+	    if($column_headings == TRUE){
+	       $column_heading = $row;
+	       $column_headings = FALSE;
+	    }
+	    else{
+	       $record = array_combine($column_heading,$row);
+	       $records[] = $record;
+	    }
+	 }
+      fclose($handle);
       }
-   }
-   fclose($CSVfp);*/
-   function readCSV($csvFile){
-   	$file_handle = fopen($csvFile, 'r');
-		while (!feof($file_handle) ) {
-				$line_of_text[] = fgetcsv($file_handle, 1024);
-					}
-						fclose($file_handle);
-							return $line_of_text;
-							}
+   
+   if(empty($_GET)){
+      foreach($records as $record){
+         $i++;
+	 $record_num = $i - 1;
+	 echo '<a href='.'"https://web.njit.edu/~ac486/is218project/index.php?record='.$record_num.'"'.'>University'.$i.'</a>';
+	 echo'</p>';
+       }
+    }
+
+    $record = $records[$_GET['record']];
+    echo"<table border='1'>";
+
+    foreach($record as $key => $value){
+       echo"<tr>";
+       echo"<th>$key</th><td>$value</td>";
+       echo"</tr>";
+    }
+
+    echo"</table>";
+  }//close function
+}//close class
+
+$newfile = new csvfile();
+$newfile->readcsv("hd2013.csv",TRUE);
 
 
-							// Set path to CSV file
-							$csvFile = 'hd2013.csv';
-
-							$csv =
-							readCSV($csvFile);
-							echo '<pre>';
-							print_r($csv);
-							echo '</pre>';
 
 
 ?>
