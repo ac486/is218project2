@@ -29,7 +29,7 @@ class csvfile{
 	 $i++;
 	 $record_num = $i - 1;
 	 echo '<a
-	 href='.'"https://web.njit.edu/~ac486/is218project/index.php?record='.$record_num.'"'.'>'.$i.'</a>';
+	 href='.'"http://osl84.njit.edu/~ac486/is218project/index.php?record='.$record_num.'"'.'>'.$i.'</a>';
 	 echo'</p>';
        }
     }
