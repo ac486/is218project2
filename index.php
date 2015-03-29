@@ -1,7 +1,8 @@
 <html>
 <head><title>IS218 Project 1</title></head>
 <body>
-<p>test1</p>
+<heading>Integrated Post Secondary Educational Data System</heading>
+</br>
 <?php
 class csvfile{
    public $csv;
@@ -27,7 +28,8 @@ class csvfile{
       foreach($records as $record){
 	 $i++;
 	 $record_num = $i - 1;
-	 echo '<a href='.'"https://web.njit.edu/~ac486/is218project/index.php?record='.$record_num.'"'.'>University'.$i.'</a>';
+	 echo '<a
+	 href='.'"https://web.njit.edu/~ac486/is218project/index.php?record='.$record_num.'"'.'>'.$i.'</a>';
 	 echo'</p>';
        }
     }
