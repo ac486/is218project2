@@ -19,6 +19,7 @@ class csvfile{
 	    else{
 	       $record = array_combine($column_heading,$row);
 	       $records[] = $record;
+	       $name[] = $row[1]; //creates array for university names
 	    }
 	 }
       fclose($handle);
@@ -29,7 +30,7 @@ class csvfile{
 	 $i++;
 	 $record_num = $i - 1;
 	 echo '<a
-	 href='.'"http://osl84.njit.edu/~ac486/is218project/index.php?record='.$record_num.'"'.'>'.$i.'</a>';
+	 href='.'"http://osl84.njit.edu/~ac486/is218project/index.php?record='.$record_num.'"'.'>'.$name[$record_num].'</a>';
 	 echo'</p>';
        }
     }
