@@ -1,8 +1,8 @@
 <html>
 <head><title>IS218 Project 1</title></head>
 <body>
-<heading>Integrated Post Secondary Educational Data System</heading>
-</br>
+<h3>Integrated Post Secondary Educational Data System</h3>
+
 <?php
 class csvfile{
    public $csv;
