@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<h3>Integrated Post Secondary Educational Data System</h3>
+<h2>Integrated Post Secondary Educational Data System</h2>
 
 <?php
 class csvfile{
