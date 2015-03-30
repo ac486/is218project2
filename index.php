@@ -1,5 +1,8 @@
 <html>
-<head><title>IS218 Project 1</title></head>
+<head>
+<title>IS218 Project 1</title>
+<link rel="stylesheet" href="css/main.css">
+</head>
 <body>
 <h3>Integrated Post Secondary Educational Data System</h3>
 
