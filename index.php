@@ -9,20 +9,20 @@
 <?php
 class csvfile{
    public $csv;
-   public $column_headings;
+   public $headings;
 
-   public function readfile($csv,$column_headings){
+   public function readfile($csv,$headings){
    //creating function here
       ini_set('auto_detect_line_endings',TRUE);
       //use ini_set as a sanity check
       if(($handle = fopen($csv,"r")) !== FALSE){
          while(($row=fgetcsv($handle,",")) !== FALSE){
-	    if($column_headings == TRUE){
-	       $column_heading = $row;
-	       $column_headings = FALSE;
+	    if($headings == TRUE){
+	       $heading = $row;
+	       $headings = FALSE;
 	    }
 	    else{
-	       $record = array_combine($column_heading,$row);
+	       $record = array_combine($heading,$row);
 	       $records[] = $record;
 	       $name[] = $row[1]; //creates array for university names
 	    }
@@ -53,8 +53,8 @@ class csvfile{
   }//close function
 }//close class
 
-$newfile = new csvfile();//creating class
-$newfile->readfile("hd2013_edit.csv",TRUE); //running function
+$newimport = new csvfile();//creating class
+$newimport->readfile("hd2013_edit.csv",TRUE); //running function
 
 
 
