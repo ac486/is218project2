@@ -41,6 +41,8 @@ class csvfile{
     }
 
     $record = $records[$_GET['record']];//prints out table of records
+    echo '<a href='.'"https://web.njit.edu/~ac486/is218project/"'.'>'."Go
+    Back>>".'</a>';//home button
     echo"<table align=center>";
 
     foreach($record as $key => $value){
@@ -49,7 +51,7 @@ class csvfile{
        echo"<td>$value</td>";
        echo"</tr>";
     }
-
+    
     echo"</table>";
   }//close function
 }//close class
