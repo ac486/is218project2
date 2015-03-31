@@ -3,5 +3,7 @@ body{
    text-align: center; 
    font-family: Helvetica, Ariel;
 }
-
+table, th, td{
+   border: 1px dotted black;
+   }
 
