@@ -40,12 +40,13 @@ class csvfile{
        }
     }
 
-    $record = $records[$_GET['record']];
-    echo"<table border='1'>";
+    $record = $records[$_GET['record']];//prints out table of records
+    echo"<table>";
 
     foreach($record as $key => $value){
        echo"<tr>";
-       echo"<th>$key</th><td>$value</td>";
+       echo"<th>$key</th>";
+       echo"<td>$value</td>";
        echo"</tr>";
     }
 
