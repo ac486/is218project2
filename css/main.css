@@ -4,6 +4,5 @@ body{
    font-family: Helvetica, Ariel;
 }
 table, th, td{
-   border: 1px dotted black;
+   border: 1px dotted black; 
    }
-
