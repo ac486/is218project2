@@ -41,7 +41,7 @@ class csvfile{
     }
 
     $record = $records[$_GET['record']];//prints out table of records
-    echo"<table>";
+    echo"<table align=center>";
 
     foreach($record as $key => $value){
        echo"<tr>";
